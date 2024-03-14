@@ -1,0 +1,20 @@
+<div class="w-full flex">
+    <div class="w-full p-4 flex justify-around">
+      <div class="w-full" style="padding-right: 32px;">
+        <div class="flex w-full mb-4">
+          <button class="btn" (click)="router.navigate(['/preview'])">Назад</button>
+        </div>
+      </div>
+      <div class="w-full text-center justify-center" style="padding-left: 32px;">
+        <div class="flex flex-col border-2 border-dashed border-gray-400 p-8 rounded" (dragover)="handleDragOver($event)" (drop)="handleDrop($event)">
+          <p class="text-gray-500 mb-2">Перетягніть файл сертифікату сюди</p>
+          <p class="text-gray-500">або</p>
+          <label class="w-full relative cursor-pointer rounded-md bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold focus-within:outline-none py-2 px-4 mt-2">
+            <span class="text-wrap">Виберіть через стандартний діалог</span>
+            <input #fileInput type="file" class="sr-only" (change)="handleFileInputChange($event)" />
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  

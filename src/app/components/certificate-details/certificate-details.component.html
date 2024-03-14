@@ -1,0 +1,14 @@
+<div class="border-2 border-gray-400 p-4 flex flex-col items-start">
+    <ng-container *ngIf="certificateSelected">
+      <div>
+        <p>Common Name: {{ certificateSelected?.commonName }}</p>
+        <p>Issuer CN: {{ certificateSelected?.issuerCN }}</p>
+        <p>Valid From: {{ certificateSelected?.validFrom }}</p>
+        <p>Valid To: {{ certificateSelected?.validTo }}</p>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!certificateSelected">
+      <div class="text-gray-500">No certificate selected</div>
+    </ng-container>
+  </div>
+  

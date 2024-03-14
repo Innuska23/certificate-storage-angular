@@ -1,0 +1,13 @@
+<div class="w-full">
+    <ul>
+      <li *ngFor="let certificate of certificateList; let i = index"
+          [class.bg-gray-300]="certificateSelected?.commonName === certificate.commonName"
+          [class.bg-gray-200]="certificateSelected?.commonName !== certificate.commonName"
+          class="flex justify-between p-4 rounded cursor-pointer hover:bg-gray-300"
+          (click)="handleSelectCertificate(certificate)">
+        <span>{{ certificate.commonName }}</span>
+        <span *ngIf="certificateSelected?.commonName === certificate.commonName" class="text-right">&#9658;</span>
+      </li>
+    </ul>
+  </div>
+  

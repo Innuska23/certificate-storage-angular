@@ -1,0 +1,19 @@
+<div class="flex justify-center items-start p-4">
+    <div class="w-1/2 pr-8">
+      <div class="mb-4 flex w-full">
+        <button class="btn" (click)="navigateToUpload()">Додати</button>
+      </div>
+      <div class="w-full">
+        <ng-container *ngIf="isCertificatesExist; else noCertificates">
+          <!-- <app-certificate-list></app-certificate-list> -->
+        </ng-container>
+        <ng-template #noCertificates>
+          <p class="text-gray-500">Немає жодного сертифікату</p>
+        </ng-template>
+      </div>
+    </div>
+    <div class="w-1/2">
+      <!-- <app-certificate-details></app-certificate-details> -->
+    </div>
+  </div>
+  
